@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Playpen Sans", cursive, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: #004449;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+.left {
+  padding-top: 10px;
+}
+.right {
+  padding-top: 10px;
+  margin-right: 20px;
+}
+.left img {
+  height: 50px;
+}
+.right button {
+  padding: 15px 20px;
+  margin-left: 20px;
+  border-radius: 25px;
+  background-color: #004449;
+  text-decoration: none;
+  border: 0px;
+  font-size: 17px;
+  color: white;
+  font-weight: 700;
+}
+.right #login:hover {
+  background-color: #d7ffc2;
+  color: #004449;
+  padding: 15px 20px;
+}
+.right #signup {
+  border: 2px solid white;
+  padding: 15px 22px;
+}
+.right #signup:hover {
+  background-color: #007a83;
+}
+.menu-icon {
+  padding-top: 10px;
+  display: none; /* Initially hide the hamburger menu icon */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+}
+/* Style for the cross icon */
+.menu-icon.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.main {
+  height: 600px;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #004449;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+.main .hfour {
+  margin-top: 15px;
+  font-size: 23px;
+}
+.highlight {
+  color: #0bff80;
+}
+
+.main .alert {
+  margin: 20px 0px;
+}
+.alert button {
+  border-radius: 25px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 30px;
+  font-weight: bolder;
+  background-color: #0bff80;
+}
+.alert button:hover {
+  border: 2px solid #0bff80;
+  color: #0bff80;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 30px;
+  font-weight: bolder;
+  background-color: #004449;
+}
+/* images */
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.moving-image {
+  margin-top: 30px;
+  width: 100px;
+  height: auto;
+  position: relative;
+  margin-right: 30px;
+  animation: moveImages 10s linear infinite;
+}
+
+@keyframes moveImages {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.about {
+  text-align: center;
+  height: 800px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 50px;
+  background-image: url("/images/backgroundimg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fffef0;
+  z-index: 100;
+}
+.about h1 {
+  text-align: center;
+  color: #004449;
+  font-size: 35px;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.grid {
+  padding-top: 50px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.grid img {
+  height: 50px;
+}
+
+.grid:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  background-color: #fffef0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.overflow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.about .overflow {
+  height: 300px;
+  width: 700px;
+  padding: 40px 40px;
+  text-align: center;
+  background-color: #d7ffc2;
+  margin-top: 220px;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.overflow {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+.about .overflow h1 {
+  color: #004449;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.overflow .gone {
+  color: #007a83;
+}
+.overflow button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  background-color: #483cff;
+  color: white;
+  font-weight: 800;
+}
+.overflow button:hover {
+  background-color: #e4e7ff;
+  color: #483cff;
+}
+.carousel-slider {
+  height: 100%;
+  background-color: #fffef0;
+}
+.carousel-slider h1 {
+  text-align: center;
+  font-size: 45px;
+  padding-bottom: 20px;
+  color: #004449;
+  padding-top: 200px;
+}
+h1 .deals {
+  background-color: #d7ffc2;
+}
+.carousel {
+  height: 100%;
+  margin-top: 0px;
+  background-color: #fffef0;
+  padding-bottom: 100px;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 400px;
+  width: 100%;
+}
+.reviews {
+  background-image: url("/images/reviewbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+}
+.reviews .over {
+  padding-top: 70px;
+}
+.reviews h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #004449;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+#swipper {
+  padding-top: 200px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: cornsilk;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  height: 400px;
+}
+.swiper-slide .name {
+  text-align: start;
+  padding-top: 20px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* styling for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  height: 300px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social {
+  text-align: center;
+}
+.social h3 {
+  padding-bottom: 20px;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social li {
+  display: inline;
+  margin-right: 10px; /* Add some space between the list items */
+}
+
+.social a {
+  text-decoration: none; /* Remove the underline from anchor tags */
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* media query for mobile viiew */
+
+@media screen and (max-width: 768px) {
+  .right {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .right #signup {
+    border: 2px solid white;
+    padding: 5px 2px;
+    width: auto;
+  }
+  .main {
+    height: 650px;
+    width: 100%;
+    text-align: center;
+  }
+  .main h1 {
+    font-size: 20px;
+  }
+  .main .hfour {
+    font-size: 20px;
+  }
+  .alert {
+    padding-top: 20px;
+  }
+  .alert img {
+    height: 25px;
+  }
+  .image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
+  .about {
+    height: 900px;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .grid {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .overflow-container {
+    display: none;
+  }
+
+  .carousel-slider h1 {
+    padding-top: 50px;
+    font-size: 30px;
+  }
+  .carousel {
+    height: 100%;
+    margin-top: 0px;
+    background-color: #fffef0;
+    padding-bottom: 100px;
+  }
+  .swiper-slide {
+    width: 100%;
+  }
+  .swiper-slide img {
+    align-items: center;
+    width: 250px;
+  }
+  .reviews {
+    background-image: url("/images/reviewbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    padding-bottom: 100px;
+  }
+  .reviews h1 {
+    font-size: 35px;
+  }
+  .swiper-slide {
+    height: 500px;
+    width: 500px;
+  }
+  #swipper {
+    display: none;
+  }
+}
